@@ -1,7 +1,1 @@
-{
-  "version": "1.9.15",
-  "released": "2026-11-11",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.15.zip",
-  "sha256": "dfd62e0f7fbb327e218d8e457dc775afc3d6dadbf6df8d8c44769461e961a4fc",
-  "notes": ["Bar Editor: violet glass floating toolbar"]
-}
+{"version":"1.9.18","released":"2026-11-13","download":"https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.18.zip","sha256":"524cfa2f09edfee0d9b1c47a7b1a01b3012faa9af080cdd3be4772a0c7f62728","notes":["New STRUCTURA logo and new icons in every tool","Check Updates bell: checks every 30 minutes while ASD is open","New tool: Description Style","Get it from our website button in About"]}
