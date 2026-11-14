@@ -23,7 +23,7 @@
 
 **STRUCTURA** is a free add-in for **Autodesk AutoCAD Structural Detailing 2015 (ASD)**, the program structural engineers use for reinforcement shop drawings and bar bending schedules.
 
-ASD has not been updated since 2015, and many everyday jobs in it still take dozens of clicks. STRUCTURA adds **one ribbon tab with ten tools** that turn those jobs into one or two clicks. Every tool was built by a working structural engineer to replace a step he kept repeating on real projects.
+ASD has not been updated since 2015, and many everyday jobs in it still take dozens of clicks. STRUCTURA adds **one ribbon tab with eleven tools** that turn those jobs into one or two clicks. Every tool was built by a working structural engineer to replace a step he kept repeating on real projects.
 
 <p align="center"><img src="assets/ribbon.svg" alt="The STRUCTURA ribbon tab inside ASD" width="100%"></p>
 
@@ -43,6 +43,7 @@ ASD has not been updated since 2015, and many everyday jobs in it still take doz
 | <img src="assets/icons/vp.svg" width="40"> | **Viewport Automation** `NEW` | Keep saved views in folders, each with its scale. Drag one onto a layout and a viewport is created at the right scale, zoomed and locked. |
 | <img src="assets/icons/bar.svg" width="40"> | **Bar Editor** `NEW` | Join, split, extend and stretch real ASD bars from one floating toolbar, keeping bends and hooks. ASD can't do this on its own. |
 | <img src="assets/icons/desc.svg" width="40"> | **Description Style** `NEW` | Edit ASD's reinforcement description styles in a live preview: click any part of the label, move it, add brackets, switch to two lines. |
+| <img src="assets/icons/splice.svg" width="40"> | **Splice Maker** `NEW` | Bar longer than stock? Splits it into separate real ASD bars that overlap by the lap (60Ø or mm): equal, at the middle, full stock or your own lengths, touching or offset. Each piece gets its own description and lap dimension, in one undo. |
 
 ---
 
@@ -54,7 +55,7 @@ flowchart LR
         ASD["AutoCAD Structural<br/>Detailing 2015"]
         subgraph ADDIN["STRUCTURA add-in"]
             TAB["STRUCTURA ribbon tab"]
-            TOOLS["10 tools"]
+            TOOLS["11 tools"]
             UPD["Update checker 🔔"]
             LIC["Activation (one key per PC)"]
         end
@@ -138,9 +139,9 @@ STRUCTURA-ASD/
 
 ```json
 {
-  "version": "1.9.22",
+  "version": "1.9.27",
   "released": "2026-11-14",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.22.zip",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.27.zip",
   "sha256": "…",
   "notes": ["What changed in this version"]
 }

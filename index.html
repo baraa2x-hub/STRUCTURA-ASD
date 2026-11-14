@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>STRUCTURA for ASD · free tools for AutoCAD Structural Detailing 2015</title>
-<meta name="description" content="Ten free tools for AutoCAD Structural Detailing 2015: shortcuts, batch PDF, layouts to DWG, bar editor, viewports and more. Updates itself.">
+<meta name="description" content="Eleven free tools for AutoCAD Structural Detailing 2015: shortcuts, batch PDF, layouts to DWG, bar editor, splice maker, viewports and more. Updates itself.">
 <meta property="og:title" content="STRUCTURA for ASD">
-<meta property="og:description" content="Ten free tools for AutoCAD Structural Detailing 2015.">
+<meta property="og:description" content="Eleven free tools for AutoCAD Structural Detailing 2015.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b0c10">
 
@@ -113,7 +113,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 .rtabs span{padding:7px 12px;white-space:nowrap;border-radius:8px 8px 0 0}
 .rtabs .on{background:#1f2129;color:#fff;font-weight:700;letter-spacing:.3px}
 .rrow{display:flex;overflow-x:auto;padding:10px 6px 12px;scrollbar-width:thin;scrollbar-color:#3a3d4a transparent}
-.rbtn{flex:1 0 92px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 6px 10px;border-radius:12px;text-decoration:none;color:#e6e8ef !important;position:relative;transition:background .2s,transform .2s}
+.rbtn{flex:1 0 84px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 6px 10px;border-radius:12px;text-decoration:none;color:#e6e8ef !important;position:relative;transition:background .2s,transform .2s}
 .rbtn:hover{background:#ffffff0d;transform:translateY(-3px)}
 .rbtn .ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 #ffffff40,0 6px 16px var(--g);transition:box-shadow .25s,transform .25s}
 .rbtn:hover .ic{box-shadow:inset 0 1px 0 #ffffff40,0 10px 28px var(--g);transform:scale(1.06)}
@@ -242,6 +242,17 @@ a{color:#c4b5fd}a:hover{color:#fff}
 .ghb .cnt{font-variant-numeric:tabular-nums;letter-spacing:.05em;font-weight:500}
 .lib{background:#0A66C2;border-color:#0A66C2}
 .lib:hover{background:#0a5cb0}
+
+/* splice maker demo */
+@keyframes spLong{0%,22%{opacity:1}30%,100%{opacity:0}}
+@keyframes spPiece{0%,24%{opacity:0;transform:translateY(0)}34%,100%{opacity:1;transform:translateY(var(--dy))}}
+@keyframes spLap{0%,40%{opacity:0}50%,100%{opacity:1}}
+@keyframes spCut{0%,10%{opacity:0}14%,24%{opacity:1}30%,100%{opacity:0}}
+.spd .long{animation:spLong 6s ease infinite}
+.spd .pc{animation:spPiece 6s cubic-bezier(.3,1.3,.5,1) infinite}
+.spd .lap{animation:spLap 6s ease infinite}
+.spd .cut{animation:spCut 6s ease infinite}
+@media (prefers-reduced-motion:reduce){.spd .long{opacity:0;animation:none}.spd .pc,.spd .lap{animation:none;opacity:1;transform:translateY(var(--dy))}.spd .cut{display:none}}
 </style>
 </head>
 <body>
@@ -261,9 +272,9 @@ a{color:#c4b5fd}a:hover{color:#fff}
 
   <section class="w split" id="top" style="padding-top:70px;padding-bottom:110px">
     <div>
-      <span class="tag" style="background:#a78bfa22;color:#c4b5fd">v1.9.22 · free for personal use</span>
+      <span class="tag" style="background:#a78bfa22;color:#c4b5fd">v1.9.27 · free for personal use</span>
       <h1 class="big" style="font-size:84px;line-height:1.03;letter-spacing:-2.5px;margin:24px 0 22px;font-weight:800">Draw the bar.<br><span style="color:#8a8f98">Skip the <span style="color:#a78bfa">clicks.</span></span></h1>
-      <p style="font-size:18px;line-height:1.6;color:#9ba0aa;max-width:470px;margin:0 0 34px">Ten tools that live on one ribbon tab in AutoCAD Structural Detailing 2015. Shortcuts, printing, export, bar editing.</p>
+      <p style="font-size:18px;line-height:1.6;color:#9ba0aa;max-width:470px;margin:0 0 34px">Eleven tools that live on one ribbon tab in AutoCAD Structural Detailing 2015. Shortcuts, printing, export, bar editing.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="pill" data-act="startDl">Download for Windows</button><a class="pill2" href="#tour">See the tools</a></div>
     </div>
     <div style="position:relative;height:520px">
@@ -298,7 +309,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
   </section>
 
     <section class="w" id="tour" style="padding-top:110px;padding-bottom:30px">
-    <h2 class="reveal" style="font-size:60px;line-height:1.05;letter-spacing:-2px;margin:0 0 16px;font-weight:800">Ten tools.<br><span style="color:#8a8f98">One <span style="color:#a78bfa">tab.</span></span></h2>
+    <h2 class="reveal" style="font-size:60px;line-height:1.05;letter-spacing:-2px;margin:0 0 16px;font-weight:800">Eleven tools.<br><span style="color:#8a8f98">One <span style="color:#a78bfa">tab.</span></span></h2>
     <p style="color:#9ba0aa;font-size:17px;margin:0 0 30px">This is the STRUCTURA tab you get in ASD. Click a tool to see what it does.</p>
     <div class="ribbon reveal">
       <div class="rtabs"><span>ASD - Reinforcement</span><span>ASD - Structure Elements</span><span>Home</span><span>Insert</span><span>Annotate</span><span>View</span><span>Output</span><span class="on">STRUCTURA</span></div>
@@ -322,6 +333,8 @@ a{color:#c4b5fd}a:hover{color:#fff}
         <a class="rbtn" href="#t-bar"><span class="new">NEW</span><span class="ic" style="background:#8B7CF6;--g:#8B7CF655"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M3 12h14M13 8l4 4-4 4M21 5v14"></path></svg></span><span class="nm">Bar<br>Editor</span></a>
         <span class="rsep"></span>
         <a class="rbtn" href="#t-desc"><span class="new">NEW</span><span class="ic" style="background:#22C7E0;--g:#22C7E055"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0b0c10" stroke-width="1.9" aria-hidden="true"><path d="M3 20l6-6M9 14h12"></path><path d="M11 6h8M15 6v6"></path></svg></span><span class="nm">Description<br>Style</span></a>
+        <span class="rsep"></span>
+        <a class="rbtn" href="#t-splice"><span class="new">NEW</span><span class="ic" style="background:#FF8A4C;--g:#FF8A4C55"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5h12M9 14.5h12M9 6.5v11M15 6.5v11"></path></svg></span><span class="nm">Splice<br>Maker</span></a>
         
       </div>
     </div>
@@ -475,7 +488,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 
     <div class="tour rev reveal" id="t-vp">
       <div>
-        <span class="tag" style="background:#38bdf822;color:#7dd3fc">Viewport Automation</span>
+        <span class="tag" style="background:#38bdf822;color:#7dd3fc">Viewport Automation · new</span>
         <h3 style="font-size:46px;line-height:1.06;letter-spacing:-1.4px;margin:18px 0 16px;font-weight:800">Save the view once.<br><span style="color:#8a8f98">Drag it onto any <span style="color:#38bdf8">sheet.</span></span></h3>
         <p style="color:#9ba0aa;font-size:17px;line-height:1.6;margin:0 0 22px">Keep your details in folders, each with its scale. Drag a beam detail onto the layout: a viewport is made at the right scale, zoomed to the detail and locked. Then drag the next one beside it.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="fact">1 · Pick a saved view</span><span class="fact">2 · Drag to the layout</span><span class="fact">3 · Scaled + locked</span></div>
@@ -522,7 +535,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 
     <div class="tour reveal" id="t-bar">
       <div>
-        <span class="tag" style="background:#a78bfa22;color:#c4b5fd">Bar Editor</span>
+        <span class="tag" style="background:#a78bfa22;color:#c4b5fd">Bar Editor · new</span>
         <h3 style="font-size:46px;line-height:1.06;letter-spacing:-1.4px;margin:18px 0 16px;font-weight:800">Edit bars<br><span style="color:#8a8f98">the way ASD <span style="color:#a78bfa">can't.</span></span></h3>
         <p style="color:#9ba0aa;font-size:17px;line-height:1.6;margin:0 0 22px">Join, split, extend and stretch ASD bars from one floating toolbar that stays open while you pick. Try each one in the preview.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="fact">Join two bars</span><span class="fact">Split at a line</span><span class="fact">Extend to a line</span><span class="fact">Stretch ends</span></div>
@@ -583,6 +596,33 @@ a{color:#c4b5fd}a:hover{color:#fff}
         </div>
       </div>
     </div>
+    <div class="tour reveal" id="t-splice">
+      <div>
+        <span class="tag" style="background:#FF8A4C22;color:#ffb38a">Splice Maker · new</span>
+        <h3 style="font-size:46px;line-height:1.06;letter-spacing:-1.4px;margin:18px 0 16px;font-weight:800">Bar too long?<br><span style="color:#8a8f98">Splice it <span style="color:#FF8A4C">right.</span></span></h3>
+        <p style="color:#9ba0aa;font-size:17px;line-height:1.6;margin:0 0 22px">ASD makes one locked bar when a bar is longer than stock. Splice Maker splits it into separate real bars that overlap by the lap: equal, at the middle, full stock or your own lengths. Each piece gets its own ASD description, all in one undo.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="fact">Lap = 60Ø or mm</span><span class="fact">Touching or offset</span><span class="fact">Real ASD bars</span></div>
+      </div>
+      <div class="demo spd">
+        <svg width="100%" height="100%" viewBox="0 0 560 360" aria-hidden="true">
+          <g font-family="Inter" font-size="12" fill="#9ba0aa"><text x="40" y="60">1 Ø20 · L = 24 000</text><text x="520" y="60" text-anchor="end" fill="#ffb38a">max stock 12 m</text></g>
+          <path class="long" d="M40 170 H520" stroke="#FF8A4C" stroke-width="7" stroke-linecap="round"></path>
+          <g class="cut" stroke="#e6e6ef" stroke-width="1.4" stroke-dasharray="5 4"><path d="M200 120V220"></path><path d="M360 120V220"></path></g>
+          <path class="pc" style="--dy:-9px" d="M40 170 H220" stroke="#FF8A4C" stroke-width="7" stroke-linecap="round"></path>
+          <path class="pc" style="--dy:9px" d="M180 170 H380" stroke="#ffb38a" stroke-width="7" stroke-linecap="round"></path>
+          <path class="pc" style="--dy:-9px" d="M340 170 H520" stroke="#FF8A4C" stroke-width="7" stroke-linecap="round"></path>
+          <g class="lap" font-family="Inter" font-size="11" fill="#e6e6ef" text-anchor="middle">
+            <path d="M180 140 V130 H220 V140 M340 140 V130 H380 V140" stroke="#e6e6ef" stroke-width="1.2" fill="none"></path>
+            <text x="200" y="122">lap 1200</text><text x="360" y="122">lap 1200</text>
+            <g font-size="12"><rect x="62" y="210" width="120" height="30" rx="7" fill="#1a1b23" stroke="#ffffff22"></rect><text x="122" y="230">(5) 1Ø20 L=8800</text>
+            <rect x="220" y="230" width="120" height="30" rx="7" fill="#1a1b23" stroke="#ffffff22"></rect><text x="280" y="250">(6) 1Ø20 L=8800</text>
+            <rect x="378" y="210" width="120" height="30" rx="7" fill="#1a1b23" stroke="#ffffff22"></rect><text x="438" y="230">(7) 1Ø20 L=8800</text></g>
+          </g>
+          <g font-family="Inter" font-size="12" fill="#6ee7b7"><text class="lap" x="280" y="310" text-anchor="middle">3 real ASD bars · one undo</text></g>
+        </svg>
+      </div>
+    </div>
+
   </div>
 
   <section class="w split" id="update" style="padding-top:110px;padding-bottom:110px">
@@ -592,7 +632,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
       <p style="color:#9ba0aa;font-size:17px;line-height:1.6;margin:0">While ASD is open, STRUCTURA checks for a new version every 30 minutes, rings the bell, shows what changed, and installs it the next time you close ASD. Your shortcuts and activation stay.</p>
     </div>
     <div class="panel reveal" style="padding:28px">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-weight:700;font-size:19px">Update available <span style="font-size:12px;color:#8a8f98;font-weight:500">· example, try it</span></span><span class="mono tag" style="background:#a78bfa22;color:#c4b5fd">1.9.22 → 1.9.23</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-weight:700;font-size:19px">Update available <span style="font-size:12px;color:#8a8f98;font-weight:500">· example, try it</span></span><span class="mono tag" style="background:#a78bfa22;color:#c4b5fd">1.9.27 → 1.9.28</span></div>
       <ul style="color:#9ba0aa;line-height:1.9;padding-left:18px;margin:14px 0 22px"><li>New tools and fixes, listed here</li><li>One click to install</li></ul>
       <div data-if="uIdle" hidden><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="pill" data-act="startUp">Update now</button><button class="pill2" data-act="later">Later</button></div></div>
       <div data-if="uBusy" hidden><div style="font-size:14px;margin-bottom:10px">Downloading update… <span data-t="up">0</span>%</div><div style="height:10px;border-radius:999px;background:#0b0c10;overflow:hidden"><div style="height:10px;border-radius:999px;background:#a78bfa;width:0%" data-w="up"></div></div></div>
@@ -605,7 +645,8 @@ a{color:#c4b5fd}a:hover{color:#fff}
     <h2 class="reveal" style="font-size:52px;line-height:1.06;letter-spacing:-1.5px;margin:0 0 14px;font-weight:800">All versions.<br><span style="color:#8a8f98">Need an older one? <span style="color:#a78bfa">It's here.</span></span></h2>
     <p style="color:#9ba0aa;font-size:17px;margin:0 0 28px">The last ten releases. Install over the one you have; your shortcuts and activation stay.</p>
     <div style="display:flex;flex-direction:column;gap:10px">
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.22<span class="tag" style="background:#34d39922;color:#6ee7b7;margin-left:8px">Latest</span></span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: Split, Join, Extend and Stretch now keep rounded bends and hooks</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.22.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
+      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.27<span class="tag" style="background:#34d39922;color:#6ee7b7;margin-left:8px">Latest</span></span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">New tool: Splice Maker. NEW tags, Star on GitHub in About, fixes</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.27.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
+      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.22</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: Split, Join, Extend and Stretch now keep rounded bends and hooks</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.22.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
       <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.21</span><span class="vd" style="color:#8a8f98;font-size:14px">13 Nov 2026</span><span class="vn" style="color:#c9ccd6">New update card, Downloading loader, animated About logo, rounded chips</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.21.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
       <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.19</span><span class="vd" style="color:#8a8f98;font-size:14px">13 Nov 2026</span><span class="vn" style="color:#c9ccd6">Cleaner icon tiles (less rounded, no glow)</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.19.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
       <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.18</span><span class="vd" style="color:#8a8f98;font-size:14px">13 Nov 2026</span><span class="vn" style="color:#c9ccd6">New logo and icons, Check Updates bell, Description Style</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.18.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
@@ -614,7 +655,6 @@ a{color:#c4b5fd}a:hover{color:#fff}
       <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.13</span><span class="vd" style="color:#8a8f98;font-size:14px">11 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: one toolbar for all four tools</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.13.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
       <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.12</span><span class="vd" style="color:#8a8f98;font-size:14px">11 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: ribbon buttons and hint card</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.12.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
       <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.11</span><span class="vd" style="color:#8a8f98;font-size:14px">10 Nov 2026</span><span class="vn" style="color:#c9ccd6">New tool: Bar Editor (join, split, extend, stretch)</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.11.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.10</span><span class="vd" style="color:#8a8f98;font-size:14px">8 Nov 2026</span><span class="vn" style="color:#c9ccd6">Viewport Automation: new look, lock all</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.10.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
     </div>
   </section>
 
@@ -635,7 +675,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
       </div>
     </div>
     <h2 style="font-size:60px;line-height:1.05;letter-spacing:-2px;margin:20px 0 30px;font-weight:800">Get STRUCTURA.<br><span style="color:#8a8f98">It's free.</span></h2>
-    <button class="pill" data-act="startDl">Download v1.9.22 · 3.8 MB</button>
+    <button class="pill" data-act="startDl">Download v1.9.27 · 3.9 MB</button>
     <p style="color:#8a8f98;font-size:14px;margin-top:16px">Windows 10/11 · ASD 2015 64-bit</p>
   </section>
 
@@ -653,7 +693,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
       <div class="panel mbox" style="width:460px;max-width:100%;padding:30px;background:#15161d;box-sizing:border-box">
         <div data-if="dlBusy" hidden>
           <div style="font-size:22px;font-weight:700">Downloading…</div>
-          <div class="mono" style="font-size:13px;color:#9ba0aa;margin:8px 0 20px">STRUCTURA-ASD-Setup-v1.9.22.zip</div>
+          <div class="mono" style="font-size:13px;color:#9ba0aa;margin:8px 0 20px">STRUCTURA-ASD-Setup-v1.9.27.zip</div>
           <div style="height:10px;border-radius:999px;background:#0b0c10;overflow:hidden"><div style="height:10px;border-radius:999px;background:#a78bfa;width:0%" data-w="pct"></div></div>
           <div style="font-size:13px;color:#9ba0aa;margin-top:10px"><span data-t="pct">0</span>%</div>
         </div>
@@ -664,7 +704,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
             <li>Run Setup. Windows warning? <b>More info</b> then <b>Run anyway</b>.</li>
             <li>Open ASD and activate.</li>
           </ol>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><button class="pill" data-act="closeDl">Got it</button><a href="downloads/STRUCTURA-ASD-Setup-v1.9.22.zip" style="font-size:14px">Didn't start? Click here</a></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><button class="pill" data-act="closeDl">Got it</button><a href="downloads/STRUCTURA-ASD-Setup-v1.9.27.zip" style="font-size:14px">Didn't start? Click here</a></div>
         </div>
       </div>
     </div>
@@ -672,7 +712,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 </div>
 <script>
 (function(){
-var DL='downloads/STRUCTURA-ASD-Setup-v1.9.22.zip';
+var DL='downloads/STRUCTURA-ASD-Setup-v1.9.27.zip';
 var S={dl:0,pct:0,u:0,up:0},t,t3;
 function show(){
  var m={dlOpen:S.dl>0,dlBusy:S.dl===1,dlDone:S.dl===2,uIdle:S.u===0,uBusy:S.u===1,uDone:S.u===2,uLater:S.u===3};
