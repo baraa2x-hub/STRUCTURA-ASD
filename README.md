@@ -139,9 +139,9 @@ STRUCTURA-ASD/
 
 ```json
 {
-  "version": "1.9.28",
+  "version": "1.9.29",
   "released": "2026-11-14",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.28.zip",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.29.zip",
   "sha256": "…",
   "notes": ["What changed in this version"]
 }

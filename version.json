@@ -1,1 +1,9 @@
-{"version":"1.9.28","released":"2026-11-14","download":"https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.28.zip","sha256":"4a94c1e8211f82292973b702d04894fb041cf004f6381c791872a6940dab67a7","notes":["Setup window fits small laptop screens: the tool list and terms scroll, and the Install buttons are always visible"]}
+{
+  "version": "1.9.29",
+  "released": "2026-11-14",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.29.zip",
+  "sha256": "b6789f076620eb8be11aafbd2cae8546f932d5b3b59e3ad2dc4655e319724597",
+  "notes": [
+    "Setup tool descriptions are shortened so each one fits on a single line"
+  ]
+}
