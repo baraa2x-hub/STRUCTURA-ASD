@@ -1,9 +1,9 @@
 {
-  "version": "1.9.29",
-  "released": "2026-11-14",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.29.zip",
-  "sha256": "b6789f076620eb8be11aafbd2cae8546f932d5b3b59e3ad2dc4655e319724597",
+  "version": "1.9.30",
+  "released": "2026-11-16",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.30.zip",
+  "sha256": "3df2a411f7f2aac1ab29a5d9a56f67e96ba49465fe1832b2080435ed45a34773",
   "notes": [
-    "Setup tool descriptions are shortened so each one fits on a single line"
+    "Pro updates now arrive through your activation: active Pro users get every new version automatically"
   ]
 }
