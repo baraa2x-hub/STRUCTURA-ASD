@@ -222,7 +222,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 .v1{animation:v1 9s infinite}.v2{animation:v2 9s infinite}.v3{animation:v3 9s infinite}
 
 /* versions */
-.vrow{display:grid;grid-template-columns:110px 120px minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 18px;border-radius:14px;background:#15161d;border:1px solid #ffffff10;transition:border-color .2s}
+.vrow{display:grid;grid-template-columns:110px 120px minmax(0,1fr);gap:16px;align-items:center;padding:14px 18px;border-radius:14px;background:#15161d;border:1px solid #ffffff10;transition:border-color .2s}
 .vrow:hover{border-color:#a78bfa66}
 .vrow a.dl{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:600;color:#e6e6ef;border:1px solid #ffffff22;border-radius:999px;padding:8px 16px;min-height:40px;box-sizing:border-box;white-space:nowrap}
 .vrow a.dl:hover{border-color:#a78bfa;color:#fff}
@@ -253,6 +253,91 @@ a{color:#c4b5fd}a:hover{color:#fff}
 .spd .lap{animation:spLap 6s ease infinite}
 .spd .cut{animation:spCut 6s ease infinite}
 @media (prefers-reduced-motion:reduce){.spd .long{opacity:0;animation:none}.spd .pc,.spd .lap{animation:none;opacity:1;transform:translateY(var(--dy))}.spd .cut{display:none}}
+
+/* hero word swap */
+.big.heroh{font-size:clamp(40px,10.5vw,72px) !important}
+#pricing .pgrid.two{max-width:820px;margin:0 auto}
+.sw{display:inline-flex;vertical-align:bottom;position:relative;height:1.12em;margin:.08em 0;border-radius:.2em;overflow:hidden;box-sizing:border-box;background:#a78bfa;color:#14101f;box-shadow:0 0 40px #a78bfa88,0 0 90px #8b5cf655;transition:width .55s cubic-bezier(.65,0,.25,1)}
+.sw .sww{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;padding:0 .24em;white-space:nowrap;transition:transform .55s cubic-bezier(.65,0,.25,1),opacity .45s,filter .45s}
+.sw .sww.in{transform:translateY(100%);opacity:0;filter:blur(6px)}
+.sw .sww.out{transform:translateY(-100%);opacity:0;filter:blur(6px)}
+.swm{position:absolute;left:0;top:0;visibility:hidden;white-space:nowrap;padding:0 .24em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* pricing */
+@media (prefers-reduced-motion:reduce){#pricing .pcol,#pricing .pthumb,#pricing .psave,.sw,.sw .sww{transition:none}}
+#pricing{--panel:#15161d;--panel2:#1a1b23;--fg:#f4f4f8;--mute:#8a8f98;--soft:#9ba0aa;--vio:#a78bfa;--vio2:#c4b5fd;--coral:#f4526b;--green:#34d399;color:#f4f4f8}
+#pricing .pcard{transition:opacity .45s,transform .45s}#pricing .pcard.gone{display:none}#pricing .pcard.fade{opacity:0;transform:scale(.96)}
+#pricing .peye{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--vio);text-align:center}
+#pricing h2{font-size:clamp(36px,6vw,56px);line-height:1.06;letter-spacing:-1.8px;margin:14px 0 12px;font-weight:800;text-align:center;text-wrap:balance}
+#pricing h2 span{color:var(--mute)}
+#pricing .psub{color:var(--soft);font-size:17px;line-height:1.6;text-align:center;margin:0 auto 30px;max-width:520px}
+#pricing /* toggle */
+.ptg{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:34px;flex-wrap:wrap}
+#pricing .pseg{position:relative;display:inline-flex;background:var(--panel2);border:1px solid #ffffff14;border-radius:14px;padding:5px}
+#pricing .pseg button{position:relative;z-index:1;border:0;background:none;color:var(--soft);font:600 14px Inter,sans-serif;padding:10px 20px;border-radius:10px;cursor:pointer;transition:color .3s}
+#pricing .pseg button.on{color:#14101f}
+#pricing .pseg button:focus-visible{outline:2px solid var(--vio2);outline-offset:2px}
+#pricing .pseg .pthumb{position:absolute;top:5px;bottom:5px;left:5px;border-radius:10px;background:var(--vio);box-shadow:0 0 24px #a78bfa66;transition:transform .45s cubic-bezier(.65,0,.25,1),width .45s cubic-bezier(.65,0,.25,1)}
+#pricing .psave{font-size:13px;font-weight:700;color:var(--green);background:#34d39918;border-radius:8px;padding:6px 11px;transition:opacity .35s,transform .35s}
+#pricing .psave.phide{opacity:0;transform:translateX(-8px)}
+#pricing .pwas{transition:opacity .5s,transform .5s}
+#pricing .pwas.ppre{opacity:0;transform:translateY(8px)}
+#pricing /* cards */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:stretch}
+#pricing .pcard{background:var(--panel);border:1px solid #ffffff12;border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:20px;min-width:0}
+#pricing .pcard.ppro{background:linear-gradient(180deg,#1d1830,#15161d 60%);border-color:#a78bfa66;box-shadow:0 0 60px #8b5cf62e}
+#pricing .phead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+#pricing .pname{font-size:22px;font-weight:800;letter-spacing:-.4px}
+#pricing .pfor{color:var(--mute);font-size:14px;margin-top:4px}
+#pricing .pbadge{font-size:12px;font-weight:700;border-radius:8px;padding:5px 10px;white-space:nowrap}
+#pricing .b-pop{background:#a78bfa26;color:var(--vio2)}
+#pricing .b-free{background:#34d39918;color:var(--green)}
+#pricing .pprice{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;min-height:72px}
+#pricing .pbig{font-size:60px;font-weight:800;letter-spacing:-2px;line-height:1;display:flex;font-variant-numeric:tabular-nums}
+#pricing .pbig .pcur{font-size:30px;margin-top:6px;margin-right:2px;align-self:flex-start}
+#pricing .pper{color:var(--mute);font-size:15px;padding-bottom:8px}
+#pricing .pwas{display:flex;flex-direction:column;gap:4px;padding-bottom:6px}
+#pricing .pold{color:var(--mute);font-size:18px;font-weight:600;text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:2px;display:flex}
+#pricing .poff{font-size:12px;font-weight:700;color:#fff;background:var(--coral);border-radius:7px;padding:3px 8px;align-self:flex-start}
+#pricing /* rolling digits */
+.pdg{display:inline-block;height:1em;overflow:hidden;position:relative}
+#pricing .pdg .pcol{display:flex;flex-direction:column;transition:transform .8s cubic-bezier(.6,0,.2,1)}
+#pricing .pdg .pcol span{height:1em;line-height:1em;text-align:center}
+#pricing .pnote{font-size:13px;color:var(--soft);min-height:18px}
+#pricing .pnote b{color:var(--fg)}
+#pricing ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+#pricing li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4}
+#pricing li svg{flex:none;margin-top:2px}
+#pricing li.pplus{color:var(--vio2);font-weight:600}
+#pricing li .pnw{font-size:10px;font-weight:700;letter-spacing:.5px;background:#a78bfa26;color:var(--vio2);border-radius:5px;padding:2px 6px;margin-left:6px;vertical-align:2px}
+#pricing .psep{height:1px;background:#ffffff10}
+#pricing .pbtn{margin-top:auto;display:flex;justify-content:center;align-items:center;gap:8px;border-radius:14px;padding:15px;font:700 15px Inter,sans-serif;border:0;cursor:pointer;transition:transform .2s,background .2s}
+#pricing .pbtn:hover{transform:translateY(-2px)}
+#pricing .pbtn.pw{background:#fff;color:#0b0c10}
+#pricing .pbtn.pw:hover{background:var(--vio2)}
+#pricing .pbtn.pv{background:var(--vio);color:#14101f;box-shadow:0 0 30px #a78bfa55}
+#pricing .pbtn.pv:hover{background:var(--vio2)}
+#pricing .pbtn:focus-visible{outline:2px solid var(--vio2);outline-offset:3px}
+#pricing .pfine{color:var(--mute);font-size:13px;text-align:center;margin-top:26px;line-height:1.6}
+#pricing .pdg .pcol,#pricing .pseg .pthumb,#pricing .psave{transition:none}
+#pricing .pcard.pq{border-color:#f4526b44}
+#pricing .b-val{background:#f4526b22;color:#ff9aab}
+#pricing .pbtn.pc{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px #ffffff30}
+#pricing .pbtn.pc:hover{background:#ffffff10}
+#pricing /* versions */
+.pver{margin-top:70px}
+#pricing .pver h3{font-size:30px;letter-spacing:-.8px;margin:12px 0 8px;font-weight:800;text-align:center}
+#pricing .pver .psub{margin-bottom:24px}
+#pricing .pvl{max-width:760px;margin:0 auto;background:var(--panel);border:1px solid #ffffff12;border-radius:20px;overflow:hidden}
+#pricing .pvr{display:grid;grid-template-columns:120px 110px minmax(0,1fr);gap:16px;align-items:center;padding:16px 22px;border-top:1px solid #ffffff0d;font-size:15px}
+#pricing .pvr:first-child{border-top:0;background:#a78bfa0d}
+#pricing .pvr .pv{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--vio2);display:flex;gap:8px;align-items:center}
+#pricing .pvr .pd{color:var(--mute);font-size:14px}
+#pricing .pvr .pn{color:#c9ccd6;min-width:0}
+#pricing .plt{font-family:Inter,sans-serif;font-size:11px;font-weight:700;background:#34d39922;color:#6ee7b7;border-radius:6px;padding:2px 7px}
+#pricing .plock{display:flex;gap:10px;align-items:center;justify-content:center;color:var(--soft);font-size:14px;padding:16px 22px;border-top:1px solid #ffffff0d;background:#ffffff04}
+#pricing .pvr{grid-template-columns:1fr auto}
+#pricing .pvr .pn{grid-column:1/-1}
 </style>
 </head>
 <body>
@@ -265,7 +350,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
         <svg class="nl" width="28" height="28" viewBox="44 30 136 138" aria-hidden="true"><path class="s" pathLength="100" d="M161 56 L146 41 H89 a25.5 25.5 0 0 0 0 51 H131 a25.5 25.5 0 0 1 0 51 H74 L59 158" fill="none" stroke="#a78bfa" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"></path><circle class="d" cx="89" cy="66.5" r="12" fill="#f4526b"></circle><circle class="d" cx="131" cy="117.5" r="12" fill="#34d399"></circle></svg>
         structura
       </a>
-      <div class="links" style="display:flex;gap:2px"><a class="l" href="#tour">Tools</a><a class="l" href="#versions">Versions</a><a class="l" href="#update">Updates</a><a class="l" href="#get">Download</a></div>
+      <div class="links" style="display:flex;gap:2px"><a class="l" href="#tour">Tools</a><a class="l" href="#pricing">Pricing</a><a class="l" href="#versions">Versions</a><a class="l" href="#update">Updates</a><a class="l" href="#get">Download</a></div>
       <button class="pill" data-act="startDl" style="padding:10px 20px;font-size:14px;min-height:44px">Download</button>
     </nav>
   </header>
@@ -273,7 +358,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
   <section class="w split" id="top" style="padding-top:70px;padding-bottom:110px">
     <div>
       <span class="tag" style="background:#a78bfa22;color:#c4b5fd">v1.9.29 · free for personal use</span>
-      <h1 class="big" style="font-size:84px;line-height:1.03;letter-spacing:-2.5px;margin:24px 0 22px;font-weight:800">Draw the bar.<br><span style="color:#8a8f98">Skip the <span style="color:#a78bfa">clicks.</span></span></h1>
+      <h1 class="big heroh" style="font-size:84px;line-height:1.03;letter-spacing:-2.5px;margin:24px 0 22px;font-weight:800">Draw the bar.<br><span class="sw" aria-hidden="true"></span><span class="sr">Split it, join it, splice it, stretch it, print it.</span><br><span style="color:#8a8f98;white-space:nowrap">Skip the <span style="color:#a78bfa">clicks.</span></span></h1>
       <p style="font-size:18px;line-height:1.6;color:#9ba0aa;max-width:470px;margin:0 0 34px">Eleven tools that live on one ribbon tab in AutoCAD Structural Detailing 2015. Shortcuts, printing, export, bar editing.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="pill" data-act="startDl">Download for Windows</button><a class="pill2" href="#tour">See the tools</a></div>
     </div>
@@ -641,22 +726,72 @@ a{color:#c4b5fd}a:hover{color:#fff}
     </div>
   </section>
 
+  <section id="pricing" style="padding-top:110px;padding-bottom:40px">
+<div class="pwrap w">
+  <div class="peye">Pricing</div>
+  <h2>Start free.<br><span>Go Pro when you need it.</span></h2>
+  <p class="psub">Six tools are free forever. Pro adds the bar tools and every tool and update that comes next.</p>
+
+  <div class="ptg">
+    <div class="pseg" role="tablist" aria-label="Billing period">
+      <span class="pthumb" aria-hidden="true"></span>
+      <button id="b-m" class="on" role="tab" aria-selected="true" data-p="m">Monthly</button>
+      <button id="b-y" role="tab" aria-selected="false" data-p="y">Yearly</button>
+    </div>
+    <span class="psave phide" id="psave">Save 20%</span>
+  </div>
+
+  <div class="pgrid">
+    <article class="pcard">
+      <div class="phead"><div><div class="pname">Free</div><div class="pfor">For every engineer</div></div><span class="pbadge b-free">Free forever</span></div>
+      <div class="pprice"><div class="pbig"><span class="pcur">$</span>0</div><span class="pper">forever</span></div>
+      <div class="pnote">No card needed. Just activate once.</div>
+      <div class="psep"></div>
+      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>ASD Shortcuts</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Batch PDF Register</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Layouts to DWG</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Layout Manager</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Backup Save</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Super Element Manager</li></ul>
+      <button class="pbtn pw" type="button" data-act="startDl">Download free</button>
+    </article>
+    <article class="pcard ppro" data-k="p">
+      <div class="phead"><div><div class="pname">Pro</div><div class="pfor">For daily shop drawings</div></div><span class="pbadge b-pop">Most popular</span></div>
+      <div class="pprice">
+        <div class="pbig pnow" aria-live="polite"></div>
+        <div class="pwas ppre"><span class="poff">50% OFF</span><span class="pold"></span></div>
+        <span class="pper"></span>
+      </div>
+      <div class="pnote"></div>
+      <div class="psep"></div>
+      <ul><li class="pplus"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Everything in Free</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Distribution Dots</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Viewport Automation</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bar Editor</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Description Style</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Splice Maker</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Every new tool and update that comes next<span class="pnw">INCLUDED</span></span></li></ul>
+      <a class="pbtn pv" href="https://www.linkedin.com/in/al-baraa-mohummed-826a96205" target="_blank" rel="noopener">Get Pro</a>
+    </article>
+    <article class="pcard pq" data-k="q">
+      <div class="phead"><div><div class="pname">Pro · 3 months</div><div class="pfor">Pay once for three months</div></div><span class="pbadge b-val">Save more</span></div>
+      <div class="pprice">
+        <div class="pbig pnow" aria-live="polite"></div>
+        <div class="pwas ppre"><span class="poff">50% OFF</span><span class="pold"></span></div>
+        <span class="pper"></span>
+      </div>
+      <div class="pnote"></div>
+      <div class="psep"></div>
+      <ul><li class="pplus"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Everything in Free</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Distribution Dots</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Viewport Automation</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bar Editor</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Description Style</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Splice Maker</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Every new tool and update that comes next<span class="pnw">INCLUDED</span></span></li></ul>
+      <a class="pbtn pc" href="https://www.linkedin.com/in/al-baraa-mohummed-826a96205" target="_blank" rel="noopener">Get 3 months</a>
+    </article>
+  </div>
+
+  <p class="pfine">Prices in US dollars. Activation is one key per PC.</p>
+
+  </div>
+  </section>
+
     <section class="w" id="versions" style="padding-top:20px;padding-bottom:110px">
-    <h2 class="reveal" style="font-size:52px;line-height:1.06;letter-spacing:-1.5px;margin:0 0 14px;font-weight:800">All versions.<br><span style="color:#8a8f98">Need an older one? <span style="color:#a78bfa">It's here.</span></span></h2>
-    <p style="color:#9ba0aa;font-size:17px;margin:0 0 28px">The last ten releases. Install over the one you have; your shortcuts and activation stay.</p>
+    <h2 class="reveal" style="font-size:52px;line-height:1.06;letter-spacing:-1.5px;margin:0 0 14px;font-weight:800">What's new.<br><span style="color:#8a8f98">Pro gets it <span style="color:#a78bfa">by itself.</span></span></h2>
+    <p style="color:#9ba0aa;font-size:17px;margin:0 0 28px">The latest releases. Pro users get every new version automatically inside ASD.</p>
     <div style="display:flex;flex-direction:column;gap:10px">
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.29<span class="tag" style="background:#34d39922;color:#6ee7b7;margin-left:8px">Latest</span></span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Setup tool descriptions shortened so each fits on one line</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.29.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.28</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Setup window fits small laptop screens: scrollable list and terms, buttons always visible</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.28.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.27</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">New tool: Splice Maker. NEW tags, Star on GitHub in About, fixes</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.27.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.22</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: Split, Join, Extend and Stretch now keep rounded bends and hooks</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.22.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.21</span><span class="vd" style="color:#8a8f98;font-size:14px">13 Nov 2026</span><span class="vn" style="color:#c9ccd6">New update card, Downloading loader, animated About logo, rounded chips</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.21.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.19</span><span class="vd" style="color:#8a8f98;font-size:14px">13 Nov 2026</span><span class="vn" style="color:#c9ccd6">Cleaner icon tiles (less rounded, no glow)</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.19.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.18</span><span class="vd" style="color:#8a8f98;font-size:14px">13 Nov 2026</span><span class="vn" style="color:#c9ccd6">New logo and icons, Check Updates bell, Description Style</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.18.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.15</span><span class="vd" style="color:#8a8f98;font-size:14px">11 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: violet glass floating toolbar</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.15.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.14</span><span class="vd" style="color:#8a8f98;font-size:14px">11 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: floating "island" toolbar</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.14.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
-      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.13</span><span class="vd" style="color:#8a8f98;font-size:14px">11 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: one toolbar for all four tools</span><a class="dl" href="downloads/STRUCTURA-ASD-Setup-v1.9.13.zip" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Download</a></div>
+      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.29<span class="tag" style="background:#34d39922;color:#6ee7b7;margin-left:8px">Latest</span></span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Setup tool descriptions shortened so each fits on one line</span></div>
+      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.28</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Setup window fits small laptop screens: scrollable list and terms, buttons always visible</span></div>
+      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.27</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">New tool: Splice Maker. NEW tags, Star on GitHub in About, fixes</span></div>
+      <div class="vrow"><span class="mono" style="color:#c4b5fd;font-weight:700">v1.9.22</span><span class="vd" style="color:#8a8f98;font-size:14px">14 Nov 2026</span><span class="vn" style="color:#c9ccd6">Bar Editor: Split, Join, Extend and Stretch now keep rounded bends and hooks</span></div>
     </div>
   </section>
+
 
   <section class="w" id="get" style="padding-bottom:120px;text-align:center">
     <div class="C" style="height:360px;max-width:900px;margin:0 auto 10px;border-radius:24px;background:#0d0e14;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:24px 24px;border:1px solid #ffffff10;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:left">
@@ -741,6 +876,49 @@ window.addEventListener('scroll',onS,{passive:true});onS();show();
 })();
 </script>
 
+<script>(function(){
+/* p = Pro card (Monthly / Yearly), q = 3 months card (fixed) */
+var P={p:{m:{now:10,old:20,per:'/ month',note:'<b>$10</b> instead of $20, billed every month'},
+          y:{now:96,old:120,per:'/ year',note:'<b>$8 a month</b>, 20% less than paying monthly'}},
+       q:{m:{now:30,old:40,per:'/ 3 months',note:'<b>$10 a month</b>, paid once every 3 months'}}};
+function roller(el,n){var cols=[];for(var k=0;k<n;k++){var d=document.createElement('span');d.className='pdg';var c=document.createElement('span');c.className='pcol';
+  for(var i=0;i<10;i++){var s=document.createElement('span');s.textContent=i;c.appendChild(s)}d.appendChild(c);el.appendChild(d);cols.push(c)}return cols}
+function setNum(cols,val,anim){var s=String(val).padStart(cols.length,'0'),lead=true;
+  cols.forEach(function(c,i){c.style.transition=anim?'':'none';c.style.transitionDelay=(anim?(cols.length-1-i)*110:0)+'ms';
+    c.style.transform='translateY(-'+(+s[i])+'em)';var h=lead&&s[i]==='0'&&i<cols.length-1;if(!h)lead=false;c.parentNode.style.display=h?'none':''})}
+function mk(el){var w=document.createElement('span');w.style.display='flex';el.appendChild(w);return roller(w,3)}
+var period='m',cards={};
+document.querySelectorAll('#pricing .pcard[data-k]').forEach(function(card){var k=card.dataset.k,now=card.querySelector('.pnow'),old=card.querySelector('.pold');
+  var cur=document.createElement('span');cur.className='pcur';cur.textContent='$';now.appendChild(cur);old.textContent='$';
+  cards[k]={el:card,nc:mk(now),oc:mk(old),was:card.querySelector('.pwas'),shown:false}});
+function data(k){return P[k][period]||P[k].m}
+function fill(k){var c=cards[k],d=data(k);c.el.querySelector('.pper').textContent=d.per;c.el.querySelector('.pnote').innerHTML=d.note;
+  c.el.querySelector('.poff').textContent=Math.round((1-d.now/d.old)*100)+'% OFF'}
+function chrome(){document.getElementById('psave').classList.toggle('phide',period!=='y');
+  document.querySelectorAll('#pricing .pseg button').forEach(function(b){var on=b.dataset.p===period;b.classList.toggle('on',on);b.setAttribute('aria-selected',on)});
+  var b=document.querySelector('#pricing .pseg button[data-p="'+period+'"]'),th=document.querySelector('#pricing .pthumb');th.style.width=b.offsetWidth+'px';th.style.transform='translateX('+(b.offsetLeft-5)+'px)'}
+function reset(k){var c=cards[k],d=data(k);c.shown=false;fill(k);setNum(c.nc,d.old,false);setNum(c.oc,d.old,false);c.was.classList.add('ppre')}
+function reveal(k){var c=cards[k];c.shown=true;c.was.classList.remove('ppre');setTimeout(function(){setNum(c.nc,data(k).now,true)},250)}
+function go(p){if(p===period)return;period=p;chrome();var qc=cards.q.el;var gr=qc.parentNode;if(p==='y'){qc.classList.add('fade');setTimeout(function(){if(period==='y'){qc.classList.add('gone');gr.classList.add('two')}},420)}else{qc.classList.remove('gone');gr.classList.remove('two');void qc.offsetWidth;qc.classList.remove('fade')}var c=cards.p,d=data('p');fill('p');if(c.shown){setNum(c.nc,d.now,true);setNum(c.oc,d.old,true)}else{setNum(c.nc,d.old,false);setNum(c.oc,d.old,false)}}
+document.querySelectorAll('#pricing .pseg button').forEach(function(b){b.onclick=function(){go(b.dataset.p)}});
+chrome();Object.keys(cards).forEach(reset);
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver' in window&&!reduce){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var k=e.target.dataset.k,c=cards[k];
+    if(e.isIntersecting&&!c.shown)setTimeout(function(){reveal(k)},k==='q'?180:0);else if(!e.isIntersecting&&c.shown&&e.boundingClientRect.top>0)reset(k)})},{threshold:.6});
+  Object.keys(cards).forEach(function(k){io.observe(cards[k].el)});
+}else{Object.keys(cards).forEach(function(k){cards[k].shown=true;cards[k].was.classList.remove('ppre');setNum(cards[k].nc,data(k).now,false)})}
+if(document.fonts)document.fonts.ready.then(chrome);
+})();
+(function(){var W=['Split it.','Join it.','Splice it.','Stretch it.','Print it.'],sw=document.querySelector('.sw');if(!sw)return;
+var i=0,m=document.createElement('span');m.className='swm';sw.parentNode.appendChild(m);
+function word(t,c){var e=document.createElement('span');e.className='sww'+(c?' '+c:'');e.textContent=t;sw.appendChild(e);return e}
+function fit(t){m.textContent=t;sw.style.width=m.getBoundingClientRect().width+'px'}
+var cur=word(W[0]);fit(W[0]);
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+setInterval(function(){var n=(i+1)%W.length,el=word(W[n],'in');fit(W[n]);void el.offsetWidth;cur.classList.add('out');el.classList.remove('in');var o=cur;setTimeout(function(){o.remove()},600);cur=el;i=n},2200);
+addEventListener('resize',function(){fit(W[i])});if(document.fonts)document.fonts.ready.then(function(){fit(W[i])});})();
+</script>
 <script>fetch('https://api.github.com/repos/baraa2x-hub/STRUCTURA-ASD').then(r=>r.ok?r.json():null).then(d=>{if(d&&typeof d.stargazers_count==='number'){var e=document.getElementById('ghStars');e.textContent=d.stargazers_count;e.hidden=false;}}).catch(function(){});</script>
 </body>
 </html>
