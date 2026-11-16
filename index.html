@@ -254,6 +254,23 @@ a{color:#c4b5fd}a:hover{color:#fff}
 .spd .cut{animation:spCut 6s ease infinite}
 @media (prefers-reduced-motion:reduce){.spd .long{opacity:0;animation:none}.spd .pc,.spd .lap{animation:none;opacity:1;transform:translateY(var(--dy))}.spd .cut{display:none}}
 
+
+/* phone layout */
+@media (max-width:600px){
+ .w{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+ .heroart{height:400px !important;overflow:hidden}
+ .heroart .panel{left:12px !important;right:12px !important;top:60px !important;height:280px !important}
+ .heroart .panel>div:first-child{overflow:hidden;white-space:nowrap}
+ .ddemo{grid-template-columns:minmax(0,1fr) !important;height:auto !important}
+ .ddemo>div:first-child{height:200px}
+ .ddemo>div:last-child{display:grid !important;grid-template-columns:1fr 1fr;gap:8px !important}
+ .ddemo>div:last-child>div:first-child{grid-column:1/-1}
+ .ddemo>div:last-child>div:last-child{grid-column:1/-1;border-radius:10px !important;margin-top:4px !important}
+ .C{height:230px !important}
+ .C .all{transform:scale(.6) !important}
+ .geth{font-size:clamp(36px,11vw,60px) !important}
+ h2,h3{overflow-wrap:break-word}
+}
 /* hero word swap */
 .big.heroh{font-size:clamp(40px,10.5vw,72px) !important}
 #pricing .pgrid.two{max-width:820px;margin:0 auto}
@@ -311,7 +328,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 #pricing li.pplus{color:var(--vio2);font-weight:600}
 #pricing li .pnw{font-size:10px;font-weight:700;letter-spacing:.5px;background:#a78bfa26;color:var(--vio2);border-radius:5px;padding:2px 6px;margin-left:6px;vertical-align:2px}
 #pricing .psep{height:1px;background:#ffffff10}
-#pricing .pbtn{margin-top:auto;display:flex;justify-content:center;align-items:center;gap:8px;border-radius:14px;padding:15px;font:700 15px Inter,sans-serif;border:0;cursor:pointer;transition:transform .2s,background .2s}
+#pricing .pbtn{margin-top:auto;display:flex;justify-content:center;align-items:center;gap:8px;border-radius:14px;padding:15px;font:700 15px Inter,sans-serif;border:0;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s}
 #pricing .pbtn:hover{transform:translateY(-2px)}
 #pricing .pbtn.pw{background:#fff;color:#0b0c10}
 #pricing .pbtn.pw:hover{background:var(--vio2)}
@@ -322,7 +339,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
 #pricing .pcard.pq{border-color:#f4526b44}
 #pricing .b-val{background:#f4526b22;color:#ff9aab}
 #pricing .pbtn.pc{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px #ffffff30}
-#pricing .pbtn.pc:hover{background:#ffffff10}
+#pricing .pbtn.pc:hover{background:#f4526b22;box-shadow:inset 0 0 0 1.5px #f4526b,0 0 26px #f4526b40;color:#fff}
 #pricing /* versions */
 .pver{margin-top:70px}
 #pricing .pver h3{font-size:30px;letter-spacing:-.8px;margin:12px 0 8px;font-weight:800;text-align:center}
@@ -361,7 +378,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
       <p style="font-size:18px;line-height:1.6;color:#9ba0aa;max-width:470px;margin:0 0 34px">Eleven tools that live on one ribbon tab in AutoCAD Structural Detailing 2015. Shortcuts, printing, export, bar editing.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap"><button class="pill" data-act="startDl">Download for Windows</button><a class="pill2" href="#tour">See the tools</a></div>
     </div>
-    <div style="position:relative;height:520px">
+    <div class="heroart" style="position:relative;height:520px">
       <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:#8b5cf6;filter:blur(70px);opacity:.45;left:40px;top:40px"></div>
       <div style="position:absolute;width:260px;height:260px;border-radius:50%;background:#f4526b;filter:blur(70px);opacity:.35;right:20px;bottom:30px"></div>
       <div style="position:absolute;width:200px;height:200px;border-radius:50%;background:#34d399;filter:blur(70px);opacity:.25;right:120px;top:0"></div>
@@ -659,7 +676,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
         <p style="color:#9ba0aa;font-size:17px;line-height:1.6;margin:0 0 22px">Edit ASD's reinforcement description styles in a live preview: click any part of the label, move it, add brackets, switch to two lines. Saved in the drawing as real ASD styles.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="fact">Live preview</span><span class="fact">Click to edit</span><span class="fact">7 description types</span></div>
       </div>
-      <div class="demo" style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;padding:22px;box-sizing:border-box">
+      <div class="demo ddemo" style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;padding:22px;box-sizing:border-box">
         <div style="background:#0d0e14;border-radius:14px;position:relative;overflow:hidden">
           <svg width="100%" height="100%" viewBox="0 0 320 316" aria-hidden="true">
             <path d="M30 210h260" stroke="#22C7E0" stroke-width="5" stroke-linecap="round"></path><path d="M30 210v-30" stroke="#22C7E0" stroke-width="5" stroke-linecap="round"></path>
@@ -808,7 +825,7 @@ a{color:#c4b5fd}a:hover{color:#fff}
         <div class="cur"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 0v44M0 22h44" stroke="#fff" stroke-width="1.2"></path><rect x="17" y="17" width="10" height="10" fill="none" stroke="#fff" stroke-width="1.2"></rect></svg></div>
       </div>
     </div>
-    <h2 style="font-size:60px;line-height:1.05;letter-spacing:-2px;margin:20px 0 30px;font-weight:800">Get STRUCTURA.<br><span style="color:#8a8f98">It's free.</span></h2>
+    <h2 class="geth" style="font-size:60px;line-height:1.05;letter-spacing:-2px;margin:20px 0 30px;font-weight:800">Get STRUCTURA.<br><span style="color:#8a8f98">It's free.</span></h2>
     <button class="pill" data-act="startDl">Download v1.9.30 · 3.9 MB</button>
     <p style="color:#8a8f98;font-size:14px;margin-top:16px">Windows 10/11 · ASD 2015 64-bit</p>
   </section>
