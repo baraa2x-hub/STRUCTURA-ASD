@@ -940,7 +940,7 @@ window.addEventListener('scroll',onS,{passive:true});onS();show();
 /* p = Pro card (Monthly / Yearly), q = 3 months card (fixed) */
 var P={p:{m:{now:10,old:20,per:'/ month',note:'<b>$10</b> instead of $20, billed every month'},
           y:{now:96,old:120,per:'/ year',note:'<b>$8 a month</b>, 20% less than paying monthly'}},
-       q:{m:{now:30,old:40,per:'/ 3 months',note:'<b>$10 a month</b>, paid once every 3 months'}}};
+       q:{m:{now:25,old:30,per:'/ 3 months',note:'<b>$25</b> instead of $30, paid once every 3 months'}}};
 function roller(el,n){var cols=[];for(var k=0;k<n;k++){var d=document.createElement('span');d.className='pdg';var c=document.createElement('span');c.className='pcol';
   for(var i=0;i<10;i++){var s=document.createElement('span');s.textContent=i;c.appendChild(s)}d.appendChild(c);el.appendChild(d);cols.push(c)}return cols}
 function setNum(cols,val,anim){var s=String(val).padStart(cols.length,'0'),lead=true;
