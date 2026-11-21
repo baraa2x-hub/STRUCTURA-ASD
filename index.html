@@ -283,6 +283,48 @@ a{color:#c4b5fd}a:hover{color:#fff}
 @keyframes dlxHide{100%{opacity:0;visibility:hidden}}
 @keyframes dlxMsg{100%{opacity:1;visibility:visible;right:50%;transform:translate(50%,-50%)}}
 @media (prefers-reduced-motion:reduce){.dlx,.dlx *{animation-duration:.01s !important;animation-delay:0s !important}}
+
+/* Pro order popup (InstaPay) */
+#pricing .pegp{font-size:13.5px;color:var(--vio2);margin-top:-12px;font-variant-numeric:tabular-nums}
+#pricing .pegp b{color:#fff}
+.po-scrim{position:fixed;inset:0;z-index:60;background:rgba(5,4,10,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:flex-start;padding:16px;overflow-y:auto;box-sizing:border-box}
+.po [hidden]{display:none !important}
+.po-scrim[hidden]{display:none}
+.po{margin:auto 0;width:min(440px,100%);box-sizing:border-box;background:#15161d;border:1px solid #ffffff1a;border-radius:22px;padding:24px;display:grid;gap:14px;color:#f4f4f8;font-family:Inter,sans-serif;box-shadow:0 30px 80px #000a,0 0 60px #8b5cf62a;animation:poPop .25s ease}
+@keyframes poPop{from{transform:translateY(10px) scale(.98);opacity:.3}}
+.po-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.po-h b{font-size:20px;font-weight:800;letter-spacing:-.3px}
+.po-x{background:#ffffff0d;border:0;color:#9ba0aa;width:34px;height:34px;border-radius:10px;font-size:16px}
+.po-x:hover{color:#fff;background:#f4526b33}
+.po-plan{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#1d1830;border:1px solid #a78bfa55;border-radius:14px;padding:12px 14px}
+.po-plan .t{font-weight:700}.po-plan .s{color:#9ba0aa;font-size:13px;font-variant-numeric:tabular-nums}
+.po-chip{font-size:12px;font-weight:700;color:#c4b5fd;background:#a78bfa26;border-radius:8px;padding:4px 10px;white-space:nowrap}
+.po-f label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:#c9ccd6}
+.po-f input{width:100%;box-sizing:border-box;height:46px;border-radius:12px;border:1px solid #ffffff1f;background:#0b0c10;color:#fff;font:15px Inter,sans-serif;padding:0 14px}
+.po-f input:focus{outline:none;border-color:#a78bfa;box-shadow:0 0 0 3px #a78bfa33}
+.po-err{color:#ff8a9b;font-size:13px;margin-top:6px}
+.po-b{height:48px;border-radius:14px;border:0;font:700 15px Inter,sans-serif;background:#a78bfa;color:#14101f;box-shadow:0 0 30px #a78bfa44;transition:background .2s,transform .2s}
+.po-b:hover{background:#c4b5fd;transform:translateY(-1px)}
+.po-b[disabled]{opacity:.6;transform:none}
+.po-b.ghost{background:#ffffff0d;color:#e6e6ef;box-shadow:none}
+.po-row{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0b0c10;border:1px solid #ffffff14;border-radius:12px;padding:10px 12px}
+.po-row span{color:#9ba0aa;font-size:13px}.po-row b,.po-row code{font-variant-numeric:tabular-nums}
+.po-row code{font-family:'JetBrains Mono',monospace;font-size:15px;color:#c4b5fd}
+.po-copy{height:32px;padding:0 12px;border-radius:9px;border:1px solid #ffffff22;background:transparent;color:#e6e6ef;font:600 12.5px Inter,sans-serif}
+.po-copy:hover{border-color:#a78bfa}
+.po-ip{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:14px;background:linear-gradient(90deg,#8a2be2,#5b16b0);color:#fff !important;font-weight:700;text-decoration:none}
+.po-ip:hover{filter:brightness(1.15)}
+.po-hint{color:#9ba0aa;font-size:13px;line-height:1.55}
+.po-steps{margin:0;padding-left:20px;color:#9ba0aa;font-size:13.5px;line-height:1.55;display:grid;gap:5px}
+.po-steps b{color:#fff}
+.po-rc{background:#f7f7fa;color:#333;border-radius:12px;padding:10px 12px;font-size:12.5px;display:grid;gap:4px}
+.po-rc div{display:flex;justify-content:space-between}
+.po-rc .hl{background:#fff3cd;border:1.5px solid #f5a623;border-radius:6px;padding:3px 6px;font-weight:700}
+.po-rc .po-cap{color:#777;font-size:11px}
+.po-ok{display:grid;justify-items:center;text-align:center;gap:10px;padding:8px 0}
+.po-ok .c{width:60px;height:60px;border-radius:50%;background:#34d39922;color:#34d399;display:grid;place-items:center;font-size:28px;box-shadow:0 0 30px #34d39933}
+.po-ok b{font-size:19px}
+@media (prefers-reduced-motion:reduce){.po{animation:none}}
 /* modern rounded cursor */
 html,body{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M3 16H11.5M20.5 16H29M16 3V11.5M16 20.5V29' stroke='%230b0c10' stroke-width='3.6'/%3E%3Crect x='11.5' y='11.5' width='9' height='9' rx='1.8' stroke='%230b0c10' stroke-width='3.6'/%3E%3Cpath d='M3 16H11.5M20.5 16H29M16 3V11.5M16 20.5V29' stroke='%23ffffff' stroke-width='1.7'/%3E%3Crect x='11.5' y='11.5' width='9' height='9' rx='1.8' stroke='%23ffffff' stroke-width='1.7'/%3E%3C/g%3E%3C/svg%3E") 16 16,crosshair}
 a,button,[data-act],label,.rbtn,summary{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M3 16H11.5M20.5 16H29M16 3V11.5M16 20.5V29' stroke='%230b0c10' stroke-width='3.6'/%3E%3Crect x='11.5' y='11.5' width='9' height='9' rx='1.8' stroke='%230b0c10' stroke-width='3.6'/%3E%3Cpath d='M3 16H11.5M20.5 16H29M16 3V11.5M16 20.5V29' stroke='%23c4b5fd' stroke-width='1.7'/%3E%3Crect x='11.5' y='11.5' width='9' height='9' rx='1.8' stroke='%23c4b5fd' stroke-width='1.7'/%3E%3C/g%3E%3C/svg%3E") 16 16,pointer !important}
@@ -806,9 +848,10 @@ input,textarea{cursor:text}
         <span class="pper"></span>
       </div>
       <div class="pnote"></div>
+      <div class="pegp" hidden></div>
       <div class="psep"></div>
       <ul><li class="pplus"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Everything in Free</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Distribution Dots</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Viewport Automation</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bar Editor</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Description Style</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Splice Maker</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Every new tool and update that comes next<span class="pnw">INCLUDED</span></span></li></ul>
-      <a class="pbtn pv" href="https://www.linkedin.com/in/al-baraa-mohummed-826a96205" target="_blank" rel="noopener">Get Pro</a>
+      <button class="pbtn pv" type="button" data-order="p">Get Pro</button>
     </article>
     <article class="pcard pq" data-k="q">
       <div class="phead"><div><div class="pname">Pro · 3 months</div><div class="pfor">Pay once for three months</div></div><span class="pbadge b-val">Save more</span></div>
@@ -818,9 +861,10 @@ input,textarea{cursor:text}
         <span class="pper"></span>
       </div>
       <div class="pnote"></div>
+      <div class="pegp" hidden></div>
       <div class="psep"></div>
       <ul><li class="pplus"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Everything in Free</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Distribution Dots</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Viewport Automation</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bar Editor</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Description Style</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Splice Maker</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f4526b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Every new tool and update that comes next<span class="pnw">INCLUDED</span></span></li></ul>
-      <a class="pbtn pc" href="https://www.linkedin.com/in/al-baraa-mohummed-826a96205" target="_blank" rel="noopener">Get 3 months</a>
+      <button class="pbtn pc" type="button" data-order="q">Get 3 months</button>
     </article>
   </div>
 
@@ -979,6 +1023,87 @@ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 setInterval(function(){var n=(i+1)%W.length,el=word(W[n],'in');fit(W[n]);void el.offsetWidth;cur.classList.add('out');el.classList.remove('in');var o=cur;setTimeout(function(){o.remove()},600);cur=el;i=n},2200);
 addEventListener('resize',function(){fit(W[i])});if(document.fonts)document.fonts.ready.then(function(){fit(W[i])});})();
 </script>
+
+<div class="po-scrim" id="poScrim" hidden>
+  <div class="po" role="dialog" aria-modal="true" aria-labelledby="poT">
+    <div class="po-h"><b id="poT">Get STRUCTURA Pro</b><button class="po-x" id="poX" type="button" aria-label="Close">✕</button></div>
+    <div class="po-plan"><div><div class="t" id="poPlan">Pro · 1 month</div><div class="s" id="poPrice">$10</div></div><span class="po-chip">Your plan</span></div>
+    <form id="poS1" style="display:grid;gap:14px" novalidate>
+      <div class="po-f"><label for="poName">Your name</label><input id="poName" autocomplete="name" maxlength="80"></div>
+      <div class="po-f"><label for="poMail">Gmail</label><input id="poMail" type="email" autocomplete="email" placeholder="name@gmail.com" maxlength="120"><div class="po-hint" style="margin-top:6px">Your Pro setup and activation are sent to this Gmail.</div></div>
+      <div class="po-err" id="poE1" hidden></div>
+      <button class="po-b" id="poSend" type="submit">Continue</button>
+    </form>
+    <div id="poS2" style="display:grid;gap:12px" hidden>
+      <div class="po-hint">Order saved. Now pay with InstaPay:</div>
+      <div class="po-row"><span>Amount</span><b id="poAmt">0 EGP</b></div>
+      <div class="po-row"><span>Order code</span><code id="poOrd">ORD-0000</code><button class="po-copy" type="button" id="poCopy">Copy</button></div>
+      <a class="po-ip" id="poIp" href="#" target="_blank" rel="noopener">Pay with InstaPay ↗</a>
+      <ol class="po-steps">
+        <li>Type the amount: <b id="poAmt2">0</b> EGP.</li>
+        <li>Press <b>Add Reason for Transfer</b> and write your order code <b id="poOrd2">ORD-0000</b>.</li>
+        <li>Press Next and send.</li>
+        <li>On the receipt, copy the <b>Reference</b> number at the bottom and paste it here.</li>
+      </ol>
+      <div class="po-rc" aria-label="Example InstaPay receipt"><div><span>Total Amount</span><span id="poRcA">0 EGP</span></div><div class="hl"><span>Reference</span><span>571810721771</span></div><div><span>Reason for transfer</span><span id="poRcO">ORD-0000</span></div><div class="po-cap">Example receipt. Your Reference number will be different.</div></div>
+      <div class="po-f"><label for="poRef">InstaPay Reference number</label><input id="poRef" inputmode="numeric" placeholder="e.g. 571810721771" maxlength="30"></div>
+      <div class="po-err" id="poE2" hidden></div>
+      <button class="po-b" id="poPaid" type="button">I've sent the money</button>
+    </div>
+    <div id="poS3" class="po-ok" hidden>
+      <div class="c">✓</div>
+      <b>Thanks, we got it</b>
+      <div class="po-hint">Your Pro setup will arrive at <b id="poOkMail" style="color:#fff;font-size:inherit"></b> once the transfer is checked, usually within a few hours. Check Spam too.</div>
+      <button class="po-b ghost" id="poDone" type="button" style="width:100%">Close</button>
+    </div>
+  </div>
+</div>
 <script>fetch('https://api.github.com/repos/baraa2x-hub/STRUCTURA-ASD').then(r=>r.ok?r.json():null).then(d=>{if(d&&typeof d.stargazers_count==='number'){var e=document.getElementById('ghStars');e.textContent=d.stargazers_count;e.hidden=false;}}).catch(function(){});</script>
+
+<script>
+(function(){
+var API='https://script.google.com/macros/s/AKfycbxT48Q2pCvqdwzqHpzPIahhcU1mj_1kdkil74G32Vmr1r8j5E7aOOgkM_xurkUK_2nD/exec';
+var $=function(i){return document.getElementById(i)};
+var NAMES={pro1m:'Pro · 1 month',pro3m:'Pro · 3 months',pro1y:'Pro · 1 year'},USD={pro1m:10,pro3m:25,pro1y:96};
+var R=null,plan='pro1m',order=null,gmail='';
+function post(body){return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body),redirect:'follow'}).then(function(r){return r.json()})}
+function fmt(n){return Number(n).toLocaleString('en-US')}
+function yearly(){var b=document.querySelector('#pricing .pseg button.on');return b&&b.dataset.p==='y'}
+function egpLines(){if(!R)return;document.querySelectorAll('#pricing .pcard[data-k]').forEach(function(c){var k=c.dataset.k,id=k==='q'?'pro3m':(yearly()?'pro1y':'pro1m'),e=c.querySelector('.pegp');
+  if(R.prices&&R.prices[id]){e.innerHTML='≈ <b>'+fmt(R.prices[id])+' EGP</b> today';e.hidden=false}})}
+fetch(API+'?action=rate',{redirect:'follow'}).then(function(r){return r.json()}).then(function(d){if(d&&d.ok){R=d;egpLines()}}).catch(function(){});
+document.querySelectorAll('#pricing .pseg button').forEach(function(b){b.addEventListener('click',function(){setTimeout(egpLines,320)})});
+function step(n){['poS1','poS2','poS3'].forEach(function(s,i){$(s).hidden=i!==n})}
+function open(p){plan=p;$('poPlan').textContent=NAMES[p];$('poPrice').textContent='$'+USD[p]+(R&&R.prices?' · ≈ '+fmt(R.prices[p])+' EGP':'');
+  $('poE1').hidden=true;$('poE2').hidden=true;$('poRef').value='';step(0);$('poScrim').hidden=false;document.documentElement.style.overflow='hidden';setTimeout(function(){$('poName').focus()},50)}
+function close(){$('poScrim').hidden=true;document.documentElement.style.overflow=''}
+document.querySelectorAll('[data-order]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.order==='q'?'pro3m':(yearly()?'pro1y':'pro1m'))})});
+$('poX').onclick=close;$('poDone').onclick=close;
+$('poScrim').addEventListener('click',function(e){if(e.target===$('poScrim'))close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!$('poScrim').hidden)close()});
+function err(id,t){$(id).textContent=t;$(id).hidden=false}
+$('poS1').addEventListener('submit',function(e){e.preventDefault();$('poE1').hidden=true;
+  var n=$('poName').value.trim(),m=$('poMail').value.trim().toLowerCase();
+  if(!n)return err('poE1','Please type your name.');
+  if(!/^[a-z0-9.+_-]+@(gmail|googlemail)\.com$/.test(m))return err('poE1','Please enter a Gmail address, like name@gmail.com.');
+  var b=$('poSend');b.disabled=true;b.textContent='Sending…';
+  post({action:'order',name:n,gmail:m,plan:plan}).then(function(d){
+    if(!d||!d.ok)return err('poE1',(d&&d.error)||'Something went wrong. Please try again.');
+    order=d.order;gmail=m;var amt=fmt(d.amountEgp);
+    $('poAmt').textContent=amt+' EGP';$('poAmt2').textContent=amt;$('poRcA').textContent=amt+' EGP';
+    $('poOrd').textContent=order;$('poOrd2').textContent=order;$('poRcO').textContent=order;
+    $('poIp').href=d.payLink||(R&&R.payLink)||'#';step(1);
+  }).catch(function(){err('poE1','No connection. Please check your internet and try again.')}).then(function(){b.disabled=false;b.textContent='Continue'})});
+$('poCopy').onclick=function(){var t=$('poOrd').textContent,b=this;function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1400)}
+  try{navigator.clipboard.writeText(t).then(ok,function(){getSelection().selectAllChildren($('poOrd'))})}catch(_){getSelection().selectAllChildren($('poOrd'))}};
+$('poPaid').onclick=function(){$('poE2').hidden=true;var r=$('poRef').value.replace(/\s+/g,'');
+  if(!/^\d{6,20}$/.test(r))return err('poE2','Please type the Reference number from your InstaPay receipt (numbers only).');
+  var b=this;b.disabled=true;b.textContent='Sending…';
+  post({action:'orderPaid',order:order,gmail:gmail,reference:r}).then(function(d){
+    if(!d||!d.ok)return err('poE2',(d&&d.error)||'Something went wrong. Please try again.');
+    $('poOkMail').textContent=gmail;step(2);
+  }).catch(function(){err('poE2','No connection. Please check your internet and try again.')}).then(function(){b.disabled=false;b.textContent="I've sent the money"})};
+})();
+</script>
 </body>
 </html>
