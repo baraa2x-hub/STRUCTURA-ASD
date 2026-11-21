@@ -1,9 +1,9 @@
 {
-  "version": "1.9.30",
-  "released": "2026-11-16",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Setup-v1.9.30.zip",
-  "sha256": "3df2a411f7f2aac1ab29a5d9a56f67e96ba49465fe1832b2080435ed45a34773",
+  "version": "1.9.37",
+  "released": "2026-11-21",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.37.zip",
+  "sha256": "2a6ced7dc06fc00e4eed08a1b2b6fe983bdeaa7295776b33962f9c3df06f2b74",
   "notes": [
-    "Pro updates now arrive through your activation: active Pro users get every new version automatically"
+    "Your name and Gmail now follow your account everywhere (license button, activation window and My plan) after each online check, and My plan always shows your current plan."
   ]
 }
