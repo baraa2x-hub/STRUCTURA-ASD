@@ -23,7 +23,7 @@
 
 **STRUCTURA** is a free add-in for **Autodesk AutoCAD Structural Detailing 2015 (ASD)**, the program structural engineers use for reinforcement shop drawings and bar bending schedules.
 
-ASD has not been updated since 2015, and many everyday jobs in it still take dozens of clicks. STRUCTURA adds **one ribbon tab with eleven tools** that turn those jobs into one or two clicks. Every tool was built by a working structural engineer to replace a step he kept repeating on real projects.
+ASD has not been updated since 2015, and many everyday jobs in it still take dozens of clicks. STRUCTURA adds **one ribbon tab with twelve tools** that turn those jobs into one or two clicks. Every tool was built by a working structural engineer to replace a step he kept repeating on real projects.
 
 <p align="center"><img src="assets/ribbon.svg" alt="The STRUCTURA ribbon tab inside ASD" width="100%"></p>
 
@@ -44,6 +44,7 @@ ASD has not been updated since 2015, and many everyday jobs in it still take doz
 | <img src="assets/icons/bar.svg" width="40"> | **Bar Editor** `NEW` | Join, split, extend and stretch real ASD bars from one floating toolbar, keeping bends and hooks. ASD can't do this on its own. |
 | <img src="assets/icons/desc.svg" width="40"> | **Description Style** `NEW` | Edit ASD's reinforcement description styles in a live preview: click any part of the label, move it, add brackets, switch to two lines. |
 | <img src="assets/icons/splice.svg" width="40"> | **Splice Maker** `NEW` | Bar longer than stock? Splits it into separate real ASD bars that overlap by the lap (60Ø or mm): equal, at the middle, full stock or your own lengths, touching or offset. Each piece gets its own description and lap dimension, in one undo. |
+| <img src="assets/icons/beam.svg" width="40"> | **Beam Section** `NEW` `PRO` | Type the beam (Rect, L or T with slab) and its steel. Draws the concrete, real ASD stirrups, donut bars in layers, side bars, dimensions, labels and an auto-numbered title in one click, with bar spacing checked against ECP 203. |
 
 ---
 
@@ -55,7 +56,7 @@ flowchart LR
         ASD["AutoCAD Structural<br/>Detailing 2015"]
         subgraph ADDIN["STRUCTURA add-in"]
             TAB["STRUCTURA ribbon tab"]
-            TOOLS["11 tools"]
+            TOOLS["12 tools"]
             UPD["Update checker 🔔"]
             LIC["Activation (one key per PC)"]
         end
@@ -139,9 +140,9 @@ STRUCTURA-ASD/
 
 ```json
 {
-  "version": "1.9.37",
+  "version": "1.9.38",
   "released": "2026-11-14",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.37.zip",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.38.zip",
   "sha256": "…",
   "notes": ["What changed in this version"]
 }

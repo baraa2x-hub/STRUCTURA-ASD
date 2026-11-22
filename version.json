@@ -1,9 +1,10 @@
 {
-  "version": "1.9.37",
-  "released": "2026-11-21",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.37.zip",
-  "sha256": "2a6ced7dc06fc00e4eed08a1b2b6fe983bdeaa7295776b33962f9c3df06f2b74",
+  "version": "1.9.38",
+  "released": "2026-11-22",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.38.zip",
+  "sha256": "ea6e7ec9b2fe9486e34f320fab475da8cdd75433dc54ffd9e1a47b84c883aa3c",
   "notes": [
-    "Your name and Gmail now follow your account everywhere (license button, activation window and My plan) after each online check, and My plan always shows your current plan."
+    "New Pro tool: Beam Section. Type the beam (Rect, L or T with slab) and the steel, and it draws the concrete, real ASD stirrups, donut bars in layers, side bars, dimensions, labels and a numbered title in one click.",
+    "Bar spacing is checked against the Egyptian code (ECP 203) before you insert."
   ]
 }
