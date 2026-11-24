@@ -44,8 +44,8 @@ ASD has not been updated since 2015, and many everyday jobs in it still take doz
 | <img src="assets/icons/bar.svg" width="40"> | **Bar Editor** `NEW` | Join, split, extend and stretch real ASD bars from one floating toolbar, keeping bends and hooks. ASD can't do this on its own. |
 | <img src="assets/icons/desc.svg" width="40"> | **Description Style** `NEW` | Edit ASD's reinforcement description styles in a live preview: click any part of the label, move it, add brackets, switch to two lines. |
 | <img src="assets/icons/splice.svg" width="40"> | **Splice Maker** `NEW` | Bar longer than stock? Splits it into separate real ASD bars that overlap by the lap (60Ø or mm): equal, at the middle, full stock or your own lengths, touching or offset. Each piece gets its own description and lap dimension, in one undo. |
-| <img src="assets/icons/beam.svg" width="40"> | **Beam Section** `NEW` `PRO` | Type the beam (Rect, L or T with slab) and its steel. Draws the concrete, real ASD stirrups, donut bars in layers, side bars, dimensions, labels and an auto-numbered title in one click, with bar spacing checked against ECP 203. |
-| <img src="assets/icons/column.svg" width="40"> | **Column Section** `NEW` `PRO` | Rectangle, square or circle columns. Type the size and the bars: draws the concrete, the outer tie and inner ties (closed, diamond, octagon or spiral) as real ASD bars with counts and descriptions, dimensions and an auto column mark, checked against ECP 203. |
+| <img src="assets/icons/beam.svg" width="40"> | **Beam Section** `NEW` | Type the beam (Rect, L or T with slab) and its steel. Draws the concrete, real ASD stirrups, donut bars in layers, side bars, dimensions, labels and an auto-numbered title in one click, with bar spacing checked against ECP 203. |
+| <img src="assets/icons/column.svg" width="40"> | **Column Section** `NEW` | Rectangle, square or circle columns. Type the size and the bars: draws the concrete, the outer tie and inner ties (closed, diamond, octagon or spiral) as real ASD bars with counts and descriptions, dimensions and an auto column mark, checked against ECP 203. |
 
 ---
 
