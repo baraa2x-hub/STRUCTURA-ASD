@@ -1,10 +1,11 @@
 {
-  "version": "1.9.38",
-  "released": "2026-11-22",
-  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.38.zip",
-  "sha256": "ea6e7ec9b2fe9486e34f320fab475da8cdd75433dc54ffd9e1a47b84c883aa3c",
+  "version": "1.9.43",
+  "released": "2026-11-24",
+  "download": "https://baraa2x-hub.github.io/STRUCTURA-ASD/downloads/STRUCTURA-ASD-Pro-Setup-v1.9.43.zip",
+  "sha256": "18e3af7f47b432c49b56f58df4ad35c52434afba200a229f301224920263775b",
   "notes": [
-    "New Pro tool: Beam Section. Type the beam (Rect, L or T with slab) and the steel, and it draws the concrete, real ASD stirrups, donut bars in layers, side bars, dimensions, labels and a numbered title in one click.",
-    "Bar spacing is checked against the Egyptian code (ECP 203) before you insert."
+    "New tool: Column Section. Rectangle, square or circle columns with the outer tie and inner ties drawn as real ASD bars, with counts, descriptions, dimensions and a column mark, checked against ECP 203.",
+    "Beam Section and Column Section: INSERT IN DRAWING now hides the window and lets you pick the point in the drawing directly.",
+    "Circular columns use ASD's own circular tie with proper hooks. New white ribbon icons for Beam and Column Section."
   ]
 }
